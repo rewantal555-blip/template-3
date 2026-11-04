@@ -141,16 +141,15 @@ nav .page-links > li > a:hover::before {
   display: flex;
   align-items: center;
   min-height: calc(100vh - 70.8px);
-  background-image: url();
   padding-bottom: 120px;
 }
 #landing .container .text {
   flex: 1;
 }
-@media screen and (max-width:991px) {
-    #landing .container .text {
-        text-align: center;
-    }
+@media screen and (max-width: 991px) {
+  #landing .container .text {
+    text-align: center;
+  }
 }
 #landing .container .text h1 {
   font-weight: bold;
@@ -158,10 +157,10 @@ nav .page-links > li > a:hover::before {
   margin: 0;
   letter-spacing: -2;
 }
-@media screen and (max-width:767px) {
-    #landing .container .text h1 {
-        font-size: 28px;
-    }
+@media screen and (max-width: 767px) {
+  #landing .container .text h1 {
+    font-size: 28px;
+  }
 }
 #landing .container p {
   color: #666;
@@ -170,25 +169,25 @@ nav .page-links > li > a:hover::before {
   margin: 5px 0;
   max-width: 500px;
 }
-@media screen and (max-width:991px) {
-    #landing .container p {
-        margin: 10px auto;
-    }
+@media screen and (max-width: 991px) {
+  #landing .container p {
+    margin: 10px auto;
+  }
 }
-@media screen and (max-width:767px) {
-    #landing .container p {
-        font-size: 18px;
-    }
+@media screen and (max-width: 767px) {
+  #landing .container p {
+    font-size: 18px;
+  }
 }
 #landing .container .img img {
+  position: relative;
   width: 600px;
   animation: up-and-down 5s linear infinite;
-  max-width: 100%;
 }
-@media screen and (max-width:991px) {
-    #landing .container .img img {
-        display: none;
-    }
+@media screen and (max-width: 991px) {
+  #landing .container .img img {
+    display: none;
+  }
 }
 #landing .go-down {
   transform: translateX(-50%);
@@ -200,9 +199,18 @@ nav .page-links > li > a:hover::before {
   transition: var(--main-transition-duration);
 }
 #landing .go-down i {
-
 }
 #landing .go-down:hover {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 /* End Landing Section */
+/* Start Animation */
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}
