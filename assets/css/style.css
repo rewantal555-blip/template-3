@@ -1,0 +1,123 @@
+/* Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+/* Global variable */
+:root {
+  --primary-font: "Lato", sans-serif;
+  --primary-color: #2196f3;
+  --secondary-color: #1787e0;
+  --main-transition-duration: 0.3s;
+}
+* {
+  box-sizing: border-box;
+}
+/* Global rules */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--primary-font);
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* small Devices */
+@media screen and (min-width: 768px) {
+  .container {
+    min-width: 750px;
+  }
+}
+/* Medium Devices */
+@media screen and (min-width: 992px) {
+  .container {
+    min-width: 970px;
+  }
+}
+/* Large screen */
+@media screen and (min-width: 1200px) {
+  .container {
+    min-width: 1170x;
+  }
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+/* Start Navigation section */
+nav {
+  background-color: white;
+  box-shadow: 0 0 10px #ddd;
+  position: relative;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+nav .logo {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70.8px;
+}
+@media screen and (max-width: 767px) {
+    nav .logo {
+        width:100%;
+        height: 50px;
+    }
+}
+nav .page-links {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+    nav .page-links {
+    margin: auto;
+    }
+}
+nav .page-links > li > a {
+  color: black;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70.8px;
+  position: relative;
+  transition:var(--main-transition-duration);
+  overflow: hidden;
+}
+@media screen and (max-width:767px) {
+    nav .page-links > li > a {
+    height: 40px;
+    padding: 10px;
+    font-size: 13px;
+    }
+}
+nav .page-links > li > a::before {
+    content: '';
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 4px;
+    top: 0;
+    left: -100%;
+    transition: var(--main-transition-duration);
+}
+nav .page-links > li > a:hover {
+    color: var(--primary-color);
+    background-color: #fafafa;
+}
+nav .page-links > li > a:hover::before {
+    left: 0;
+}
+/* End Navigation section */
