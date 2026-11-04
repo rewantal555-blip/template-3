@@ -49,6 +49,46 @@ ul {
 a {
   text-decoration: none;
 }
+.main-title {
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 0 auto 80px;
+  border: 3px solid black;
+  text-transform: uppercase;
+  position: relative;
+  transition: var(--main-transition-duration);
+}
+.main-title::before,
+.main-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  z-index: 1;
+}
+.main-title::after {
+  right: -30px;
+}
+.main-title::before {
+  left: -30px;
+}
+.main-title:hover::before {
+  animation: left-move 0.5s linear forwards;
+  z-index: -1;
+}
+.main-title:hover::after {
+    animation: right-move 0.5s linear forwards;
+    z-index: -1;
+}
+.main-title:hover {
+    color: white;
+    border:3px solid white;
+    transition-delay:0.5s;
+}
 /* Start Navigation section */
 nav {
   background-color: white;
@@ -121,10 +161,10 @@ nav .page-links > li > a:hover {
 nav .page-links > li > a:hover::before {
   left: 0;
 }
-nav .page-links > li:hover .mega-menu{
-    opacity: 1;
-    z-index: 100;
-    top:calc(100% + 2px);
+nav .page-links > li:hover .mega-menu {
+  opacity: 1;
+  z-index: 100;
+  top: calc(100% + 2px);
 }
 /* End Navigation section */
 /* Start Landing Section  */
@@ -213,70 +253,72 @@ nav .page-links > li:hover .mega-menu{
 /* End Landing Section */
 /* Start mega menu list */
 nav .mega-menu {
-    position: absolute;
-    display: flex;
-    left: 0;
-    top: calc(100% + 50px );
-    width: 100%;
-    background-color: white;
-    border-bottom: 3px solid var(--primary-color);
-    z-index: -1;
-    gap: 40px;
-    padding: 30px;
-    transition:  top var(--main-transition-duration), opacity var(--main-transition-duration);
-    opacity: 0;
+  position: absolute;
+  display: flex;
+  left: 0;
+  top: calc(100% + 50px);
+  width: 100%;
+  background-color: white;
+  border-bottom: 3px solid var(--primary-color);
+  z-index: -1;
+  gap: 40px;
+  padding: 30px;
+  transition:
+    top var(--main-transition-duration),
+    opacity var(--main-transition-duration);
+  opacity: 0;
 }
-@media screen and (max-width:767px) {
-   nav .mega-menu {
+@media screen and (max-width: 767px) {
+  nav .mega-menu {
     flex-direction: column;
     gap: 0;
     padding: 5px;
-   } 
-   nav .mega-menu .links:first-of-type li:last-child {
+  }
+  nav .mega-menu .links:first-of-type li:last-child {
     border-bottom: 1px solid #e9e6e6;
-   }
+  }
 }
 nav .mega-menu .image img {
   max-width: 100%;
 }
-@media screen and (max-width:991px) {
-   nav .mega-menu .image img {
+@media screen and (max-width: 991px) {
+  nav .mega-menu .image img {
     display: none;
-   } 
+  }
 }
 nav .mega-menu .links {
-   min-width: 250px;
-   flex: 1;
+  min-width: 250px;
+  flex: 1;
 }
-nav .mega-menu .links  li {
-position: relative;
+nav .mega-menu .links li {
+  position: relative;
 }
-nav .mega-menu .links  li:not(:last-child) {
-    border-bottom: 1px solid #e9e6e6;
+nav .mega-menu .links li:not(:last-child) {
+  border-bottom: 1px solid #e9e6e6;
 }
-nav .mega-menu .links  li::before {
-    content: '';
-    top: 0;
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #fafafa;
-    transition: var(--main-transition-duration);
-    z-index: -1;
+nav .mega-menu .links li::before {
+  content: "";
+  top: 0;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #fafafa;
+  transition: var(--main-transition-duration);
+  z-index: -1;
 }
-nav .mega-menu .links  li:hover::before{
-width: 100%;
+nav .mega-menu .links li:hover::before {
+  width: 100%;
 }
-nav .mega-menu .links  li a {
-color: var(--primary-color);
-display: block;
-padding: 15px;
-font-size: 15px;
-font-weight: bold;
+nav .mega-menu .links li a {
+  color: var(--primary-color);
+  display: block;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: bold;
 }
-nav .mega-menu .links  li a svg {
-margin-right: 10px;
+nav .mega-menu .links li a svg {
+  margin-right: 10px;
 }
 /* End mega menu list */
 /* Start Animation */
@@ -303,4 +345,31 @@ margin-right: 10px;
     transform: translateY(-15px);
   }
 }
+@keyframes left-move {
+     50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes right-move {
+    50% {
+     right: 0;
+     width: 12px;
+     height: 12px;
+    }
+    100% {
+        right: 0;
+              border-radius: 0;
+              width: 50%;
+              height: 100%;
+    }
+}
+
 /* End Animation */
