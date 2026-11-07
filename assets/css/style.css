@@ -21,25 +21,25 @@ body {
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* small Devices */
 @media screen and (min-width: 768px) {
   .container {
-    min-width: 750px;
+    width: 750px;
   }
 }
 /* Medium Devices */
 @media screen and (min-width: 992px) {
   .container {
-    min-width: 970px;
+    width: 970px;
   }
 }
 /* Large screen */
 @media screen and (min-width: 1200px) {
   .container {
-    min-width: 1170px;
+    width: 1170px;
   }
 }
 ul {
@@ -328,13 +328,8 @@ nav .mega-menu .links li a svg {
 }
 #article .container  {
     display: grid ;
-    grid-template-columns: repeat( auto-fill, minmax(260px, 1fr) );
+    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
     gap: 40px;
-}
-@media screen and (max-width:320px) {
-     #article .container {
-        grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
-    }
 }
 #article .container .box {
 box-shadow:0px  2px 15px rgb(0 0 0 / 10%);  
@@ -378,6 +373,33 @@ transition: var(--main-transition-duration);
  animation: move-right 0.6s linear infinite;
  }
 /* End Articles Section*/
+/* Start Gallery Section*/
+#gallery {
+    padding: var(--main-padding);
+}
+#gallery .container {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 40px;
+}
+#gallery .container .box {
+padding: 15px;
+background-color: white;
+box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);;
+}
+#gallery .container .image {
+   
+}
+#gallery .container .image img {
+    max-width: 100%;
+    
+}
+
+
+
+
+/* End Gallerys Section*/
+
 /* Start Animation */
 @keyframes up-and-down {
   0%,
