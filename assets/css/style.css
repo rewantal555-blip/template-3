@@ -855,7 +855,7 @@ nav .mega-menu .links li a svg {
   z-index: 1;
 }
 #work .container .boxes .box::before {
-   content: "";
+  content: "";
   left: 50%;
   top: 50%;
   position: absolute;
@@ -898,6 +898,133 @@ nav .mega-menu .links li a svg {
   margin: 20px 0 0;
 }
 /* End  how it works section */
+/* Start latest Events Section */
+#events {
+  padding: var(--main-padding);
+  position: relative;
+}
+#events .dots {
+  background-image: url(../images/dots.png) ;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 180px;
+  width: 198px;
+}
+#events .dots-up {
+  right: -10px;
+    top: 1px;
+}
+#events .dots-down {
+  bottom: 0;
+  left: 0;
+}
+#events .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#events .container > img {
+max-width: 450px;
+}
+@media screen and (max-width:991px) {
+  #events .container > img {
+    display: none;
+  }
+  #events .dots {
+    display: none;
+  }
+}
+#events .container .info {
+  flex: 1;
+}
+#events .container .info .time {
+display: flex;
+justify-content: center;
+gap: 10px;
+align-items: center;
+margin: 20px auto;
+
+}
+@media screen and (max-width:991px) {
+  #events .container .info .time {
+    flex-wrap: wrap;
+  }
+  #events .container {
+    margin-top: -50px;
+  }
+}
+#events .container .info .time .unit {
+transition: var(--main-transition-duration);
+text-align: center;
+border-radius: 6px;
+border: 1px solid #d4d4d4;
+width: 100px;
+}
+#events .container .info .time .unit span {
+  display: block;
+  transition: var(--main-transition);
+}
+#events .container .info .time .unit span:first-child {
+  font-size: 35px;
+  color: var(--primary-color);
+  padding: 15px;
+  font-weight: bold;
+
+}
+#events .container .info .time .unit span:last-child {
+  font-size: 13px;
+  padding: 8px 10px;
+  border-top: 1px solid #d4d4d4;
+}
+#events .container .info h2 {
+font-size: 30px;
+text-align: center;
+margin: 40px 0 0 ;
+}
+#events .container .info p {
+font-size: 20px;
+line-height: 1.7;
+text-align: center;
+color: #777;
+}
+#events  .subscribe {
+  width: 100%;
+  margin-top: 50px;
+}
+#events  .subscribe form {
+  padding: 30px 40px;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #f6f5f5;
+  border-radius:50px;
+  display: flex;
+  gap: 10px;
+}
+@media screen and (max-width:767px) {
+  #events  .subscribe form {
+    flex-direction: column;
+    padding: 30px 10px;
+  }
+}
+#events  .subscribe form input[type = "email"] {
+  padding: 20px;
+  flex: 1;
+  border: none;
+  caret-color: var(--primary-color);
+  border-radius: 50px;
+}
+#events  .subscribe form input[type = "submit"] {
+  padding: 20px;
+  cursor: pointer;
+  transition: var(--main-transition-duration);
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+}
+/* End   latest Events section */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
