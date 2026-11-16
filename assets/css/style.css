@@ -904,15 +904,15 @@ nav .mega-menu .links li a svg {
   position: relative;
 }
 #events .dots {
-  background-image: url(../images/dots.png) ;
+  background-image: url(../images/dots.png);
   background-repeat: no-repeat;
   position: absolute;
   height: 180px;
   width: 198px;
 }
 #events .dots-up {
-  right: -10px;
-    top: 1px;
+  right: 0px;
+  top: 1px;
 }
 #events .dots-down {
   bottom: 0;
@@ -925,9 +925,9 @@ nav .mega-menu .links li a svg {
   flex-wrap: wrap;
 }
 #events .container > img {
-max-width: 450px;
+  max-width: 450px;
 }
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
   #events .container > img {
     display: none;
   }
@@ -939,14 +939,13 @@ max-width: 450px;
   flex: 1;
 }
 #events .container .info .time {
-display: flex;
-justify-content: center;
-gap: 10px;
-align-items: center;
-margin: 20px auto;
-
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  margin: 20px auto;
 }
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
   #events .container .info .time {
     flex-wrap: wrap;
   }
@@ -955,11 +954,11 @@ margin: 20px auto;
   }
 }
 #events .container .info .time .unit {
-transition: var(--main-transition-duration);
-text-align: center;
-border-radius: 6px;
-border: 1px solid #d4d4d4;
-width: 100px;
+  transition: var(--main-transition-duration);
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #d4d4d4;
+  width: 100px;
 }
 #events .container .info .time .unit span {
   display: block;
@@ -970,7 +969,6 @@ width: 100px;
   color: var(--primary-color);
   padding: 15px;
   font-weight: bold;
-
 }
 #events .container .info .time .unit span:last-child {
   font-size: 13px;
@@ -978,43 +976,43 @@ width: 100px;
   border-top: 1px solid #d4d4d4;
 }
 #events .container .info h2 {
-font-size: 30px;
-text-align: center;
-margin: 40px 0 0 ;
+  font-size: 30px;
+  text-align: center;
+  margin: 40px 0 0;
 }
 #events .container .info p {
-font-size: 20px;
-line-height: 1.7;
-text-align: center;
-color: #777;
+  font-size: 20px;
+  line-height: 1.7;
+  text-align: center;
+  color: #777;
 }
-#events  .subscribe {
+#events .subscribe {
   width: 100%;
   margin-top: 50px;
 }
-#events  .subscribe form {
+#events .subscribe form {
   padding: 30px 40px;
   max-width: 600px;
   margin: 20px auto;
   background-color: #f6f5f5;
-  border-radius:50px;
+  border-radius: 50px;
   display: flex;
   gap: 10px;
 }
-@media screen and (max-width:767px) {
-  #events  .subscribe form {
+@media screen and (max-width: 767px) {
+  #events .subscribe form {
     flex-direction: column;
     padding: 30px 10px;
   }
 }
-#events  .subscribe form input[type = "email"] {
+#events .subscribe form input[type="email"] {
   padding: 20px;
   flex: 1;
   border: none;
   caret-color: var(--primary-color);
   border-radius: 50px;
 }
-#events  .subscribe form input[type = "submit"] {
+#events .subscribe form input[type="submit"] {
   padding: 20px;
   cursor: pointer;
   transition: var(--main-transition-duration);
@@ -1025,6 +1023,124 @@ color: #777;
   font-weight: bold;
 }
 /* End   latest Events section */
+/* Start   Pricing Plan section */
+#pricing {
+  padding: var(--main-padding);
+  background-color: var(--section-background);
+  position: relative;
+}
+#pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+#pricing .container .box {
+  position: relative;
+  background-color: white;
+  box-shadow:
+    0px 12px 20px 0px rgb(0 0 0 / 13%),
+    0px 2px 4px 0px rgb(0 0 0 / 12%);
+  transition: var(--main-transition-duration);
+  text-align: center;
+  z-index: 1;
+}
+#pricing .container .box::before,
+#pricing .container .box::after {
+  content: "";
+  width: 0;
+  height: 50%;
+  background-color: #f6f6f6;
+  position: absolute;
+  z-index: -1;
+  transition: var(--main-transition-duration);
+}
+#pricing .container .box::before {
+  top: 0;
+  left: 0;
+}
+#pricing .container .box::after {
+  bottom: 0;
+  right: 0;
+}
+#pricing .container .box:hover::after,
+#pricing .container .box:hover::before {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  #pricing .box.popular {
+    top: -20px;
+  }
+}
+#pricing .box.popular .label {
+  background-color: var(--primary-color);
+  writing-mode: vertical-rl;
+  color: white;
+  position: absolute;
+  width: 40px;
+  padding: 10px 10px 35px 10px;
+  font-weight: bold;
+  right: 26px;
+  font-size: 18px;
+}
+#pricing .box.popular .label::before {
+  position: absolute;
+  content: "";
+  border-width: 20px;
+  border-color: transparent transparent white transparent;
+  border-style: solid;
+  right: 0;
+  bottom: -1px;
+}
+#pricing .title {
+  letter-spacing: -1;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+#pricing img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 30px;
+}
+#pricing span:first-child {
+  display: block;
+  color: var(--primary-color);
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#pricing span:last-child {
+  color: #777;
+  font-size: 18px;
+}
+#pricing ul {
+  text-align: left;
+  margin-top: 10px;
+}
+#pricing ul li {
+  padding: 20px;
+  border-top:1px solid #eee;
+}
+#pricing ul li::before {
+  
+}
+#pricing .box a {
+  width: fit-content;
+  display: block;
+  margin: 30px auto 40px;
+  padding: 20px 10px;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  border-radius: 6px;
+  transition: var(--main-transition-duration);
+
+}
+#pricing .box a:hover {
+  color: white;
+  background-color: var(--primary-color);
+}
+/* End   Pricing Plan section */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
