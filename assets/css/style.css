@@ -1119,10 +1119,9 @@ nav .mega-menu .links li a svg {
 }
 #pricing ul li {
   padding: 20px;
-  border-top:1px solid #eee;
+  border-top: 1px solid #eee;
 }
 #pricing ul li::before {
-  
 }
 #pricing .box a {
   width: fit-content;
@@ -1134,13 +1133,75 @@ nav .mega-menu .links li a svg {
   font-weight: bold;
   border-radius: 6px;
   transition: var(--main-transition-duration);
-
 }
 #pricing .box a:hover {
   color: white;
   background-color: var(--primary-color);
 }
 /* End   Pricing Plan section */
+/*Start video Section */
+#video {
+  padding: var(--main-padding);
+}
+#video .holder {
+  display: flex;
+  justify-content: center;
+  background-color: var(--section-background);
+  border: 1px solid #ddd;
+}
+@media screen and (max-width: 991px) {
+  #video .holder {
+    flex-direction: column;
+  }
+  #video .holder .list {
+    min-width: 200px;
+  }
+}
+#video .holder .list {
+  background-color: white;
+  min-width: 250px;
+}
+#video .holder .list .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: var(--primary-color);
+  padding: 20px;
+}
+#video .holder .list li {
+  padding: 20px;
+  border-top: 1px solid #ececec;
+  transition: var(--main-transition-duration);
+  cursor: pointer;
+}
+#video .holder .list li:hover {
+  background-color: #fafafa;
+  color: var(--primary-color);
+}
+#video .holder .list li span {
+  margin-top: 10px;
+  color: #777;
+  display: block;
+}
+#video .holder .preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #e2e2e2;
+}
+
+#video .holder .preview img {
+  max-width: 100%;
+}
+#video .holder .preview .info {
+  background-color: white;
+  padding: 20px;
+}
+
+/*End video Section  */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
