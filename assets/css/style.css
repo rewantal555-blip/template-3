@@ -1380,8 +1380,78 @@ background-color:rgb(23 135 224 / 97%);
  
 }
 /* End Discount Section */
-/*End statesSection  */
-/* Start Animation */
+/* start footer */
+footer {
+  background-color: #191919;
+  padding: 70px 0 0 ;
+  color: white;
+}
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+footer .container h3 {
+  font-size: 40px;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    font-weight: bold;
+}
+footer .container .social {
+  display: flex;
+}
+footer .container .social li {
+  margin-right: 10px;
+}
+footer .container .social li a {
+  color:#313131 ;
+  background-color: #b9b9b9;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: var(--main-transition-duration);
+  font-size: 20px;
+}
+footer .container .social .facebook:hover {
+  background-color: #095fa5;
+}
+footer .container .social .tiwter:hover{
+background-color: #1da1f2;
+}
+footer .container .social .youtube:hover {
+background-color: #ff0000;
+}
+footer .container .box p {
+  line-height: 2;
+  color: #b9b9b9;
+}
+footer .links li {
+  padding: 15px 0;
+  transition: var(--main-transition-duration);
+}
+footer .links li:hover {
+  transform: translateX(10px);
+}
+footer .links li:not(:last-child){
+  border-bottom: 1px solid #444;
+}
+footer .links li a {
+color: #b9b9b9;
+transition: var(--main-transition-duration);
+}
+footer .links li:hover a {
+  color: white;
+} 
+footer .links li span {
+  margin-right: 5px;
+  color: var(--primary-color);
+}
+
+/* End footer */
+/* End Animation */
 @keyframes up-and-down {
   0%,
   100% {
