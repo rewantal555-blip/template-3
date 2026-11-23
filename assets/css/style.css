@@ -1212,15 +1212,14 @@ nav .mega-menu .links li a svg {
   min-height: 300px;
 }
 #states h2 {
-    margin: 0 auto 80px;
-    font-weight: bold;
-    font-size: 40px;
-    position: relative;
-    text-align: center;
-  
+  margin: 0 auto 80px;
+  font-weight: bold;
+  font-size: 40px;
+  position: relative;
+  text-align: center;
 }
 #states::before {
-  content: '';
+  content: "";
   position: absolute;
   background-color: rgb(255 255 255 / 95%);
   left: 0;
@@ -1232,8 +1231,8 @@ nav .mega-menu .links li a svg {
   z-index: 1;
   position: relative;
   display: grid;
- grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
- gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
 }
 #states .container .box {
   display: flex;
@@ -1245,8 +1244,9 @@ nav .mega-menu .links li a svg {
   transition: var(--main-transition-duration);
   position: relative;
 }
-#states .container .box::after, #states .container .box::before {
-  content: '';
+#states .container .box::after,
+#states .container .box::before {
+  content: "";
   position: absolute;
   width: 2px;
   background-color: var(--primary-color);
@@ -1257,13 +1257,14 @@ nav .mega-menu .links li a svg {
   bottom: 0;
   left: 0;
 }
-#states .container .box:hover::after, #states .container .box:hover::before {
+#states .container .box:hover::after,
+#states .container .box:hover::before {
   height: 100%;
 }
- #states .container .box::before {
+#states .container .box::before {
   top: 0;
   right: 0;
- }
+}
 #states .container .box svg {
   font-size: 32px;
 }
@@ -1287,80 +1288,80 @@ nav .mega-menu .links li a svg {
 #discount .image {
   position: relative;
   background-image: url(../images/discount-background1.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-display: flex;
-flex-basis: 50%;
-justify-content: center;
-align-items: center;
-color: white;
-z-index: 1;
-animation: change-background 10s linear infinite; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1;
+  animation: change-background 10s linear infinite;
 }
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
   #discount .image {
     flex-basis: 100%;
   }
 }
- #discount .image::before {
-content: '';
-position: absolute;
-width: 100%;
-height: 100%;
-z-index: -1;
-top: 0;
-left: 0;
-background-color:rgb(23 135 224 / 97%);
- }
- #discount .image .content {
+#discount .image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: rgb(23 135 224 / 97%);
+}
+#discount .image .content {
   text-align: center;
   padding: 0 20px;
- }
-  #discount .content h2 {
-    font-size: 40px;
-    letter-spacing: -2px;
-  }
-   #discount .image .content p {
-    line-height: 1.6;
-    font-size: 18px;
-    max-width: 500px;
-   }
-   #discount .image .content img {
-    max-width: 100%;
-    width: 300px;
-   }
-   #discount .form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-basis: 50%;
-    padding-bottom: 50px;
-   }
-   @media screen and (max-width:991px) {
+}
+#discount .content h2 {
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+#discount .image .content p {
+  line-height: 1.6;
+  font-size: 18px;
+  max-width: 500px;
+}
+#discount .image .content img {
+  max-width: 100%;
+  width: 300px;
+}
+#discount .form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50%;
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 991px) {
   #discount .form {
     flex-basis: 100%;
   }
 }
-   #discount .form .content {
-    text-align: center;
-    padding: 0 20px ;
-   }
-  #discount .form .input {
-    display: block;
-    width: 100%;
-    margin-bottom: 25px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    caret-color: var(--primary-color);
-    border-radius: 5px;
-  }
-  #discount .form  textarea.input {
-    resize: none;
-    height: 200px;
-  }
-#discount .form [type ="submit" ] {
+#discount .form .content {
+  text-align: center;
+  padding: 0 20px;
+}
+#discount .form .input {
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  caret-color: var(--primary-color);
+  border-radius: 5px;
+}
+#discount .form textarea.input {
+  resize: none;
+  height: 200px;
+}
+#discount .form [type="submit"] {
   display: block;
   width: 100%;
   font-size: 20px;
@@ -1373,17 +1374,16 @@ background-color:rgb(23 135 224 / 97%);
   border: none;
   border-radius: 5px;
 }
-#discount .form [type ="submit" ]:hover {
+#discount .form [type="submit"]:hover {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
   background-color: white;
- 
 }
 /* End Discount Section */
 /* start footer */
 footer {
   background-color: #191919;
-  padding: 70px 0 0 ;
+  padding: 70px 0 0;
   color: white;
 }
 footer .container {
@@ -1393,10 +1393,10 @@ footer .container {
 }
 footer .container h3 {
   font-size: 40px;
-    margin: 0 0 20px;
-    text-transform: uppercase;
-    letter-spacing: -2px;
-    font-weight: bold;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  font-weight: bold;
 }
 footer .container .social {
   display: flex;
@@ -1405,7 +1405,7 @@ footer .container .social li {
   margin-right: 10px;
 }
 footer .container .social li a {
-  color:#313131 ;
+  color: #313131;
   background-color: #b9b9b9;
   display: inline-flex;
   justify-content: center;
@@ -1418,11 +1418,11 @@ footer .container .social li a {
 footer .container .social .facebook:hover {
   background-color: #095fa5;
 }
-footer .container .social .tiwter:hover{
-background-color: #1da1f2;
+footer .container .social .tiwter:hover {
+  background-color: #1da1f2;
 }
 footer .container .social .youtube:hover {
-background-color: #ff0000;
+  background-color: #ff0000;
 }
 footer .container .box p {
   line-height: 2;
@@ -1435,21 +1435,42 @@ footer .links li {
 footer .links li:hover {
   transform: translateX(10px);
 }
-footer .links li:not(:last-child){
+footer .links li:not(:last-child) {
   border-bottom: 1px solid #444;
 }
 footer .links li a {
-color: #b9b9b9;
-transition: var(--main-transition-duration);
+  color: #b9b9b9;
+  transition: var(--main-transition-duration);
 }
 footer .links li:hover a {
   color: white;
-} 
+}
 footer .links li span {
   margin-right: 5px;
   color: var(--primary-color);
 }
-
+footer .address {
+  display: flex;
+  align-items: center;
+  color: #b9b9b9;
+  margin-bottom: 25px;
+}
+footer .address svg {
+  color: var(--primary-color);
+  font-size: 25px;
+}
+footer .address .info {
+  flex: 1;
+  line-height: 1.7;
+}
+footer .address .info span {
+  display: block;
+}
+footer .footer-gallery  img {
+    margin: 2px;
+    border: 4px solid white;
+    max-width: 78px;
+}
 /* End footer */
 /* End Animation */
 @keyframes up-and-down {
@@ -1518,9 +1539,10 @@ footer .links li span {
   }
 }
 @keyframes change-background {
-  0%,100% {
-  background-image: url(../images/discount-background1.jpg);
-  } 
+  0%,
+  100% {
+    background-image: url(../images/discount-background1.jpg);
+  }
   50% {
     background-image: url(../images/discount-background2.jpg);
   }
