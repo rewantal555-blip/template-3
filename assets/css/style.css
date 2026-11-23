@@ -1245,6 +1245,25 @@ nav .mega-menu .links li a svg {
   transition: var(--main-transition-duration);
   position: relative;
 }
+#states .container .box::after, #states .container .box::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: var(--primary-color);
+  transition: var(--main-transition-duration);
+  height: 0;
+}
+#states .container .box::after {
+  bottom: 0;
+  left: 0;
+}
+#states .container .box:hover::after, #states .container .box:hover::before {
+  height: 100%;
+}
+ #states .container .box::before {
+  top: 0;
+  right: 0;
+ }
 #states .container .box svg {
   font-size: 32px;
 }
